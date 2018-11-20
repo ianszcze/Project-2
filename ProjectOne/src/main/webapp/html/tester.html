@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Credit: http://stackoverflow.com/questions/22196587/how-to-center-align-vertically-the-container-in-bootstrap -->
+  <title>Bootstrap Centered Jumbotron</title>
+  <meta charset="utf-8" />
+
+  <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
+  <style type="text/css">
+    html, body {
+      height: 100%;
+    }
+    .container{
+      width: 525px;
+    }
+    .vertical-center {
+      height: 100%;
+      width: 100%;
+      text-align: center;  /* align the inline(-block) elements horizontally */
+      font: 0/0 a;         /* remove the gap between inline(-block) elements */
+    }
+    .vertical-center:before {    /* create a full-height inline block pseudo=element */
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;  /* vertical alignment of the inline element */
+      height: 100%;
+    }
+    .vertical-center > .container {
+      max-width: 100%;
+      background-color: gold;
+      display: inline-block;
+      vertical-align: middle;  /* vertical alignment of the inline element */
+      font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;        /* <-- reset the font property */
+    }
+    @media (max-width: 768px) {
+      .vertical-center:before {
+        /* height: auto; */
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="jumbotron vertical-center">
+    <div class="container text-center">
+
+      <h1>The easiest and powerful way</h1>
+
+      <div class="row">
+
+        <div class="col-md-7">
+          <div class="top-bg"></div>
+        </div>
+
+        <div class="col-md-5 iPhone-features" style="margin-left:-25px;">
+          <ul class="top-features">
+            <li>
+              <span><i class="fa fa-random simple_bg top-features-bg"></i></span>
+              <p><strong>Redirect</strong><br>Visitors where they converts more.</p>
+            </li>
+            <li>
+              <span><i class="fa fa-cogs simple_bg top-features-bg"></i></span>
+              <p><strong>Track</strong><br>Views, Clicks and Conversions.</p>
+            </li>
+            <li>
+              <span><i class="fa fa-check simple_bg top-features-bg"></i></span>
+              <p><strong>Check</strong><br>Constantly the status of your links.</p>
+            </li>
+            <li>
+              <span><i class="fa fa-users simple_bg top-features-bg"></i></span>
+              <p><strong>Collaborate</strong><br>With Customers, Partners and Co-Workers.</p>
+            </li>
+            <a href="pricing-and-signup.html" class="btn-primary btn h2 lightBlue get-Started-btn">GET STARTED</a>
+            <h6 class="get-Started-sub-btn">FREE VERSION AVAILABLE!</h6>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
